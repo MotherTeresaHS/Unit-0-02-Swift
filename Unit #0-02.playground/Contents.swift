@@ -25,26 +25,26 @@ class ViewController : UIViewController {
         view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         self.view = view
         
-        nameLabel.text = "Mr. Coxall"
-        nameLabel.textColor =  #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        view.addSubview(nameLabel)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        
         cityLabel.text = "Ottawa"
         cityLabel.textColor =  #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         view.addSubview(cityLabel)
         cityLabel.translatesAutoresizingMaskIntoConstraints = false
-        cityLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20).isActive = true
-        cityLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        cityLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        cityLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        nameLabel.text = "Mr. Coxall"
+        nameLabel.textColor =  #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        view.addSubview(nameLabel)
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        nameLabel.bottomAnchor.constraint(equalTo: cityLabel.topAnchor, constant: -20).isActive = true
         
         countryLabel.text = "Canada"
         countryLabel.textColor =  #colorLiteral(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
         view.addSubview(countryLabel)
         countryLabel.translatesAutoresizingMaskIntoConstraints = false
+        countryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         countryLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 20).isActive = true
-        countryLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
     }
     
     override var prefersStatusBarHidden: Bool {
